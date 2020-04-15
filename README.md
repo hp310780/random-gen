@@ -1,4 +1,4 @@
-# RandomGen #
+# random-gen #
 A random number generator that will randomly generate numbers from a given input list and probability distribution.
 E.g.
 ```python
@@ -38,7 +38,7 @@ by the total sum of the probabilities) it is more likely to return numbers that 
 ## Tests ##
 * To run the tests: `pytest tests/test_random_gen.py`
 
-## How to make RandomGen more 'pythonic' ##
+## How to make random-gen more 'pythonic' ##
 We could subclass the standard Python `Generator` class and use the dunder methods to provide `next_num` through 
 `__next__` or simply provide a generator function called `random_gen` which yields each result when called.  
 I would also advise using `random.choices` directly rather than wrapped in a class if the use cases are less than ~10000
