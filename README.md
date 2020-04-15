@@ -45,13 +45,7 @@ I would also advise using `random.choices` directly rather than wrapped in a cla
 inputs (otherwise performance suffers). This would be simpler and more readable.
 
 ## Performance ##
-# input numbers provided | # output numbers generated | Speed(secs) | Function Calls   | Memory Consumption for next_num (Mb) |
------------------------- | -------------------------- | ----------- | ---------------- | -------------------------------------
-100                      | 100                        |    0.005    | 304              |           11                         | 
-1000                     | 1000                       |    0.002    | 3004             |           11                         | 
-10000                    | 10000                      |    0.018    | 30004            |           12.4                       | 
-100000                   | 100000                     |    0.172    | 300004           |           33                         | 
-100000                   | 1000000                    |    1.95     | 3000004          |           199                        | 
+
 
 ## Further Optimisations ##
 * Memory consumption needs investigation. Is there an alternative efficient method for bisecting the cumulative probability array 
