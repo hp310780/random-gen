@@ -33,5 +33,11 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pip install pytest
+        rm -rf venv
+        python3 -m venv venv 
+        source venv/bin/activate
+        pip3 install --upgrade pip
+        pip3 install pytest
+        pip3 install -e .
         pytest
+        deactivate

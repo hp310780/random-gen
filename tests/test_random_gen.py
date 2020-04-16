@@ -32,7 +32,7 @@ def test_random_gen_empty_distribution():
     probabilities = ()
 
     with pytest.raises(ValueError):
-        r = RandomGen(random_nums, probabilities)
+        RandomGen(random_nums, probabilities)
 
 
 def test_random_gen_zero_sum_distribution():
@@ -41,7 +41,7 @@ def test_random_gen_zero_sum_distribution():
     probabilities = (0, 0, 0)
 
     with pytest.raises(ValueError):
-        r = RandomGen(random_nums, probabilities)
+        RandomGen(random_nums, probabilities)
 
 
 def test_random_gen_duplicate_random_nums():
@@ -50,7 +50,7 @@ def test_random_gen_duplicate_random_nums():
     probabilities = (1, 1, 1)
 
     with pytest.raises(ValueError):
-        r = RandomGen(random_nums, probabilities)
+        RandomGen(random_nums, probabilities)
 
 
 def test_next_num(delta):
