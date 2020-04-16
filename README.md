@@ -38,13 +38,20 @@ by the total sum of the probabilities) it is more likely to return numbers that 
 ## Tests ##
 * To run the tests: `pytest tests/test_random_gen.py`
 
-## How to make random-gen more 'pythonic' ##
+## How to make RandomGen more 'pythonic' ##
 We could subclass the standard Python `Generator` class and use the dunder methods to provide `next_num` through 
 `__next__` or simply provide a generator function called `random_gen` which yields each result when called.  
 I would also advise using `random.choices` directly rather than wrapped in a class if the use cases are less than ~10000
 inputs (otherwise performance suffers). This would be simpler and more readable.
 
 ## Performance ##
+| # input numbers provided | # output numbers generated | speed (secs) | function calls | memory consumption for next_num (mb) |
+| :---: | :---: | :---: | :---:| :---: |
+|100                      | 100                        |    0.005    | 304              |           11                         | 
+|1000                     | 1000                       |    0.002    | 3004             |           11                         | 
+|10000                    | 10000                      |    0.018    | 30004            |           12.4                       | 
+|100000                   | 100000                     |    0.172    | 300004           |           33                         | 
+|100000                   | 1000000                    |    1.95     | 3000004          |           199                        | 
 
 
 ## Further Optimisations ##
