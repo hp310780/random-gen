@@ -28,6 +28,11 @@ by the total sum of the probabilities) it is more likely to return numbers that 
 ## Prerequisites ##
 * Python 3.6
 
+## Installation ##
+```
+> pip3 install random-gen
+```
+
 ## Running ##
 ```python
 >> from random_gen import RandomGen
