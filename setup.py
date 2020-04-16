@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='random-gen',
-     version='0.0.0',
+     version='1.0.0',
      author="hp310780",
      description="Module to generate random numbers along a probability distribution",
      long_description=long_description,
