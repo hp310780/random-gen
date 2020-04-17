@@ -2,7 +2,7 @@
 
 ![Python application](https://github.com/hp310780/random-gen/workflows/Python%20application/badge.svg)
 
-A random number generator that will randomly generate numbers from a given input list and probability distribution.
+A random number generator that will randomly generate numbers from a given input list along a given probability distribution.
 E.g.
 ```python
 >> from random_gen import RandomGen
